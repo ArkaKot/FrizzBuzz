@@ -36,7 +36,7 @@ namespace FrizzBuzz
             {
                 if (!int.TryParse(Console.ReadLine(), out int userNumber))
                 {
-                    Console.WriteLine("");
+                    Console.WriteLine("Podano błędną liczbę, spróbuj ponownie");
                     continue;
                 }
                 return userNumber;
