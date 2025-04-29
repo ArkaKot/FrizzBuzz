@@ -6,27 +6,20 @@ using System.Threading.Tasks;
 
 namespace FrizzBuzz
 {
-    static class FizzBuzz
+    public class FizzBuzz
     {
-        public static void CheckNumber(int number)
+        public string CheckNumber(int number)
         {
-            if (number % 3 == 0 && number % 5 != 0)
-            {
-                Console.WriteLine("Fizz");
-            }
-            else if (number % 5 == 0 && number % 3 != 0) 
-            {
-                Console.WriteLine("Buzz");
-            }
-            else if(number % 3 == 0 && number % 5 == 0)
-            {
-                Console.WriteLine("FizzBuzz");
-            }
-            else
-            {
-                Console.WriteLine($"Wpisana liczba to {number}");
-            }
+            if (number % 15 == 0)
+                return "FizzBuzz";
 
+            if (number % 3 == 0)
+                return "Fizz";
+
+            if (number % 5 == 0)
+                return "Buzz";
+
+            return number.ToString();
         }
     }
 }

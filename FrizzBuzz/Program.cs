@@ -8,15 +8,22 @@ namespace FrizzBuzz
 {
      class Program
     {
-        static void Main(string[] args)
+         static void Main(string[] args)
         {
             try
             {
+                Console.WriteLine("Witaj w grze FizzBuzz");
+                var fizzBuzz = new FizzBuzz();
 
-                Console.WriteLine("Podaj liczbę: ");
-                var number = getUserNumber();
+                for (; ; )
+                {
+                   
+                    Console.WriteLine("Podaj liczbę: ");
+                    var number = GetUserNumber();
+                    Console.WriteLine(fizzBuzz.CheckNumber(number));
+                }
+                           
 
-                FizzBuzz.CheckNumber(number);
             }
             catch (Exception ex)
             {
@@ -30,7 +37,7 @@ namespace FrizzBuzz
 
         }
 
-        private static int getUserNumber()
+        private static  int GetUserNumber()
         {
             for (; ; )
             {
